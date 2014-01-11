@@ -16,6 +16,10 @@
 
 @implementation IFTTTAnimatedScrollViewController
 
+- (void)dealloc {
+    _scrollView.delegate = nil;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
